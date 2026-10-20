@@ -11,7 +11,7 @@
     "types": "./dist/index.d.ts"
   },
   "scripts": {
-    "build": "node api.js && tsc && gen-esm-wrapper dist/index.js dist/index.mjs",
+    "build": "node init && tsc && gen-esm-wrapper dist/index.js dist/index.mjs",
     "prepare": "rimraf dist && npm run build",
     "test": "eslint --ext .ts --ignore-path .gitignore .",
     "lint": "eslint --fix --ext .ts --ignore-path .gitignore ."
@@ -42,6 +42,7 @@
     }
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "node-fetch": "^2.6.7"
   },
   "devDependencies": {
